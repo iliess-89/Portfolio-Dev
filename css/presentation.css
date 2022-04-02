@@ -4,17 +4,21 @@
 }
 
 body {
-    height: 100vh;
     width: 100%;
-    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
+    background-color: black;
     width: 100%;
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
 }
 
 header a img {
@@ -25,7 +29,7 @@ header a img {
 .burger>div>span {
     display: block;
     position: relative;
-    background-color: black;
+    background-color: white;
     width: 55px;
     height: 5px;
     margin-right: 20px;
@@ -37,7 +41,7 @@ header a img {
     content: "";
     position: absolute;
     display: block;
-    background-color: black;
+    background-color: white;
     width: 55px;
     height: 5px;
     top: 15px;
@@ -49,7 +53,7 @@ header a img {
     content: "";
     position: absolute;
     display: block;
-    background-color: black;
+    background-color: white;
     width: 55px;
     height: 5px;
     top: 30px;
@@ -101,7 +105,157 @@ header a img {
     color: white;
 }
 
-@media screen and (min-width: 720px){
+.content-top {
+    margin-top: 100px;
+}
+
+.content-top>h1 {
+    transform: rotate(-15deg);
+    color: black;
+    font-size: 13rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 197px;
+}
+
+.content-top>h2 {
+    color: black;
+    font-size: 7rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.japon {
+    text-align: center;
+}
+
+.japon>h3 {
+    width: 100%;
+    padding-bottom: 29px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.japon>h3::before {
+    content: "";
+    position: absolute;
+    background-color: red;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    top: -80%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+
+}
+
+.japon>a {
+    border: solid 2px black;
+    color: black;
+    font-weight: bolder;
+    padding: 5px 30px;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+}
+
+.presentation {
+    padding-top: 100px;
+}
+
+.presentation>h2 {
+    color: rgba(0, 0, 0, 0.537);
+    font-family: 'Roboto', sans-serif;
+    font-size: 10rem;
+    margin-top: 40px;
+    transform: rotate(-12deg);
+    width: 326px;
+    margin: auto;
+    z-index: -1;
+
+}
+
+.presentation>img {
+    width: 295px;
+    margin-top: -133px;
+    position: absolute;
+}
+
+.presentation>.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(0, 212, 255);
+    background: linear-gradient(263deg, rgba(0, 212, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    height: 200px;
+    margin-top: 200px;
+}
+
+.presentation>.content>p {
+    color: rgba(0, 0, 0, 0.68);
+    margin: 5px;
+
+}
+
+.parkour {
+    margin-top: 50px;
+}
+
+.parkour>h2 {
+    color: rgba(0, 0, 0, 0.63);
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: -42px;
+    transform: rotate(-7deg);
+}
+
+.parkour>.table {
+    background-color: rgb(206, 202, 202);
+    padding-top: 100px;
+    padding-bottom: 40px;
+    margin: 10px 10px;
+
+}
+
+.parkour>.table>div {
+    margin-bottom: 20px;
+}
+
+.parkour>.table>div>p {
+    margin-left: 20px;
+}
+
+.parkour>.table>div>h3 {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.parkour>.table>div>.ligne {
+    border: solid 1px rgba(0, 0, 0, 0.45);
+    margin: 12px auto;
+    width: 90%;
+}
+
+.fleche{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.fleche>a{
+    margin: auto;
+}
+
+.fleche>a>img{
+    width: 100px;
+}
+
+
+@media screen and (min-width: 720px) {
     .burger>div>span {
         width: 65px;
         height: 7px;
@@ -121,40 +275,201 @@ header a img {
         height: 7px;
         margin-right: 50px;
     }
+
+    .content-top>h1 {
+        font-size: 16rem;
+        margin: auto;
+    }
+
+    .content-top>.japon>h3 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+
+    }
+
+    .content-top>.japon>a {
+        font-size: 2rem;
+        padding: 10px 45px;
+    }
+
+    .content-top>.japon>h3::before {
+        height: 550px;
+        width: 550px;
+        top: -100%;
+    }
+
+    .content-top>h1 {
+        font-size: 16rem;
+        margin: 47px auto;
+    }
+
+    .content-top>h2 {
+        height: 126px;
+        font-size: 8rem;
+        margin-bottom: 99px;
+    }
+
+    .content-top {
+        margin-top: 100px;
+    }
+
+    .presentation {
+        padding: 200px 0;
+    }
+
+    .presentation>h2 {
+        font-size: 23rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .presentation>img {
+        width: 450px;
+        margin-top: -257px;
+        position: absolute;
+        margin-left: 10px;
+    }
+
+    .presentation>.content {
+        margin-top: -10px;
+    }
+
+    .presentation>.content>p {
+        margin-left: 50%;
+        font-size: 1.4rem;
+    }
+
+    .parkour>h2 {
+        font-size: 9rem;
+    }
+
+    .parkour>.table {
+        margin: -63px 20px;
+        margin-bottom: 30px;
+    }
+
+    .parkour>.table>div>h3 {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 2rem;
+        margin-left: 10px;
+    }
+
+    .parkour>.table>div>p {
+        font-size: 2rem;
+        margin: 20px 20px;
+    }
+
+    .parkour>.table>div {
+        margin: 100px 20px;
+    }
 }
 
-
 @media screen and (min-width:1020px) {
-    .burger>div{
+    header {
+        background-color: black;
+    }
+
+    .burger>div {
         display: none;
     }
 
-    .burger>.content{
+    .burger>.content {
         display: block;
         background: none;
         top: 0px;
         left: 445px;
+        width: 50%;
     }
 
-    .burger>.content>ul{
+    .burger>.content>ul {
         display: flex;
     }
 
-    .burger>.content>ul>li{
-        margin: 30px;   
+    .burger>.content>ul>li {
+        margin: 30px;
     }
 
-    .burger>.content>ul>li>a{
-        color: black;
+    .burger>.content>ul>li>a {
+        color: white;
         font-size: 1.5rem;
         font-family: 'Roboto', sans-serif;
     }
 
+    .content-top>.japon>h3::before {
+        top: -202%;
+    }
+
+    .content-top>.japon>a:hover {
+        color: white;
+        background-color: black;
+        transition: .3s;
+    }
+
+    .content-top>h2 {
+        margin-bottom: 151px;
+    }
+
+    .presentation>h2 {
+        font-size: 37rem;
+        transform: rotate(-5deg);
+        margin-left: -64px;
+    }
+
+    .presentation>img {
+        width: 780px;
+        margin-left: -31px;
+        margin-top: -536px;
+    }
+
+    .presentation>.content {
+        margin-top: -94px;
+        height: 300px;
+    }
+
+    .presentation>.content>p {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .parkour>.table {
+        margin: 0 50px;
+        margin-bottom: 90px;
+    }
+
+    .parkour>h2 {
+        font-size: 11rem;
+        margin-bottom: -76px;
+        transform: rotate(-4deg);
+    }
+
+    .parkour>.table>div>h3 {
+        margin-left: 30px;
+    }
+
+    .parkour>.table>div>p {
+        margin-left: 70px;
+    }
+
+
 }
 
-@media screen and (min-width:1500px){
-    .burger>.content{
+@media screen and (min-width:1500px) {
+    .burger>.content {
         left: 900px;
     }
 
+    .japon>h3 {
+        width: 50%;
+        margin: auto;
+    }
+
+    .content-top>.japon>h3::before {
+        top: -148%;
+    }
+
+    .presentation>h2 {
+        font-size: 43rem;
+    }
 }

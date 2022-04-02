@@ -134,6 +134,7 @@ header a img {
         background: none;
         top: 0px;
         left: 445px;
+        width: 50%;
     }
 
     .burger>.content>ul{
