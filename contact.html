@@ -44,24 +44,31 @@
         </section>
     
         <section class="social">
-            <img src="img/character.png" alt="personnage jeux">
-
+            <a href=""><img src="img/linkedin.png" alt="linkedin"></a>
             <article>
-                <a href=""><img src="img/facebook.png" alt="facebook"></a>
-                <a href=""><img src="img/linkedin.png" alt="linkedin"></a>
-                <a href=""><img src="img/twitter.png" alt="twitter"></a>
+                <a href=""><img src="img/facebook.png" class="facebook" alt="facebook"></a>
+                <a href=""><img src="img/twitter.png" class="twitter" alt="twitter"></a>
             </article>
+
+            <img src="img/character.png" alt="personnage jeux">
         </section>
 
         <section class="formulaire">
             <img src="img/japon.jpg" alt="image du japon">
 
             <form action="POST">
-                <div>
+                <div class="name">
+                    <div>
                     <label for="">Nom</label>
                     <input type="text">
+                    </div>
+
+                    <div>
+                        <label for="">Prenom</label>
+                        <input type="text">
+                    </div>
                 </div>
-                <div>
+                    <div>
                     <label for="">E-mail</label>
                     <input type="text">
                 </div>
@@ -71,14 +78,17 @@
                 </div>
                 <div>
                     <label for="">Message</label>
-                    <input type="text">
+                    <textarea name="" id="" ></textarea>
                 </div>
                 <button>Envoyez</button>
             </form>
         </section>
     </main>
     <footer>
-
+        <section class="fleche"> 
+            <h2>Accueil</h2>
+            <a href="index.html"><img src="img/fleche.png" alt="fleche"></a>
+        </section>
     </footer>
 </body>
 </html>
