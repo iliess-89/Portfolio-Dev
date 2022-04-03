@@ -4,14 +4,18 @@
 }
 
 body {
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
     width: 100%;
     overflow: hidden;
+
 }
 
 header {
+    background-color: black;
     width: 100%;
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,7 +29,7 @@ header a img {
 .burger>div>span {
     display: block;
     position: relative;
-    background-color: black;
+    background-color: white;
     width: 55px;
     height: 5px;
     margin-right: 20px;
@@ -37,7 +41,7 @@ header a img {
     content: "";
     position: absolute;
     display: block;
-    background-color: black;
+    background-color: white;
     width: 55px;
     height: 5px;
     top: 15px;
@@ -49,7 +53,7 @@ header a img {
     content: "";
     position: absolute;
     display: block;
-    background-color: black;
+    background-color: white;
     width: 55px;
     height: 5px;
     top: 30px;
@@ -95,18 +99,117 @@ header a img {
 }
 
 .burger .content>ul>li>a {
-    color: black;
+    color: white;
     font-weight: bolder;
     text-decoration: none;
-    color: white;
 }
 
-@media screen and (min-width: 720px){
+.content-top {
+    margin-top: 100px;
+}
+
+.content-top>h1 {
+    transform: rotate(-15deg);
+    color: black;
+    font-size: 13rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 197px;
+}
+
+.content-top>h2 {
+    color: black;
+    font-size: 7rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.content-top>.japon>h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: -15px;
+}
+
+.content-top>.japon>h3:nth-child(2) {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.content-top>.japon {
+    position: relative;
+}
+
+.content-top>.japon::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+.competences {
+    margin-top: 100px;
+}
+
+.competences>article {
+    width: 94%;
+    margin: auto;
+}
+
+.competences h2 {
+    color: rgb(123, 123, 123);
+    font-size: 6rem;
+    transform: rotate(-4deg);
+}
+
+.competences h3 {
+    color: rgb(123, 123, 123);
+    text-align: end;
+    margin-top: -24px;
+    transform: rotate(-4deg);
+}
+
+.competences img {
+    width: 100%;
+}
+
+.competences .icon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.competences .icon>figure>img {
+    width: 100%;
+}
+
+.fleche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .fleche>a{
+     margin: auto;
+ }
+ 
+ .fleche>a>img{
+     width: 100px;
+ }
+ 
+
+@media screen and (min-width: 720px) {
     .burger>div>span {
         width: 65px;
         height: 7px;
         top: -17px;
-
     }
 
     .burger>div>span::after {
@@ -121,15 +224,80 @@ header a img {
         height: 7px;
         margin-right: 50px;
     }
+
+    .content-top>h1 {
+        font-size: 16rem;
+        margin: 47px auto;
+    }
+
+    .content-top>h2 {
+        height: 126px;
+        font-size: 8rem;
+        margin-bottom: 99px;
+        
+    }
+
+    .content-top>.japon::after {
+        height: 550px;
+        width: 550px;
+        top: -50%;
+    }
+
+    .content-top>.japon {
+        width: 90%;
+        margin: auto;
+    }
+
+    .content-top>.japon>h3 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        
+    }
+
+    .content-top>.japon>h3:nth-child(2) {
+        font-size: 1.5rem;
+    }
+
+    .competences {
+        margin-top: 300px;
+        width: 90%;
+    }
+
+    .competences>article>h2 {
+        font-size: 13rem;
+    }
+
+    .competences>article>h3 {
+        font-size: 2rem;
+        margin-top: -45px;
+    }
+
+    .competences .icon {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 50%;
+        margin-left: 70%;
+
+        margin-top: -619px;
+    }
+
+    .competences img {
+        width: 82%;
+        margin-left: -80px;
+    }
+
+    .competences>h2 {
+        text-align: center;
+    }
 }
 
-
 @media screen and (min-width:1020px) {
-    .burger>div{
+
+    .burger>div {
         display: none;
     }
 
-    .burger>.content{
+    .burger>.content {
         display: block;
         background: none;
         top: 0px;
@@ -137,24 +305,58 @@ header a img {
         width: 50%;
     }
 
-    .burger>.content>ul{
+    .burger>.content>ul {
         display: flex;
     }
 
-    .burger>.content>ul>li{
-        margin: 30px;   
+    .burger>.content>ul>li {
+        margin: 30px;
     }
 
-    .burger>.content>ul>li>a{
-        color: black;
+    .burger>.content>ul>li>a {
+        color: white;
         font-size: 1.5rem;
         font-family: 'Roboto', sans-serif;
     }
 
+    .content-top>.japon>h3 {
+        font-size: 2rem;
+    }
+
+    .content-top>.japon>h3:nth-child(2) {
+        font-size: 2rem;
+    }
+
+    .competences>article>h2 {
+        font-size: 24rem;
+    }
+
+    .competences>article>h3 {
+        font-size: 3rem;
+        margin-top: -90px;
+    }
+
+    .competences img {
+        width: 54%;
+        margin-left: -80px;
+    }
+
+    .competences .icon {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 52%;
+        margin-left: 58%;
+        margin-top: -704px;
+      }
 }
 
-@media screen and (min-width:1500px){
-    .burger>.content{
+@media screen and (min-width:1500px) {
+    .burger>.content {
         left: 900px;
     }
+
+    .competences>article>h2 {
+        text-align: center;
+    }
+
 }
