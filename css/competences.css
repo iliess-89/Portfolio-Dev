@@ -105,29 +105,40 @@ header a img {
 }
 
 .content-top {
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .content-top>h1 {
-    transform: rotate(-15deg);
     color: black;
-    font-size: 13rem;
+    font-size: 3rem;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    height: 197px;
+    position: relative;
 }
 
-.content-top>h2 {
-    color: black;
-    font-size: 7rem;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
+.content-top>h1::before {
+    content: "";
+    position: absolute;
+    background-color: red;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
-.content-top>.japon>h3 {
+.japon {
+    margin-top: 200px;
+}
+
+.japon>h3 {
+    color: rgb(123, 123, 123);
     text-align: center;
     font-size: 1rem;
-    margin-top: -15px;
+    margin-top: 15px;
+    transform: rotate(-4deg);
 }
 
 .content-top>.japon>h3:nth-child(2) {
@@ -136,28 +147,11 @@ header a img {
     font-size: 1rem;
 }
 
-.content-top>.japon {
-    position: relative;
-}
-
-.content-top>.japon::after {
-    content: "";
-    position: absolute;
-    background-color: red;
-    border-radius: 100%;
-    height: 300px;
-    width: 300px;
-    top: -30%;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: -1;
-}
-
 .competences {
     margin-top: 100px;
 }
 
-.competences>article {
+.competences {
     width: 94%;
     margin: auto;
 }
@@ -170,12 +164,12 @@ header a img {
 
 .competences h3 {
     color: rgb(123, 123, 123);
-    text-align: end;
-    margin-top: -24px;
-    transform: rotate(-4deg);
+    font-size: 2rem;
+    text-align: center;
+    margin: 25px 0;
 }
 
-.competences img {
+.competences>figure>img {
     width: 100%;
 }
 
@@ -189,21 +183,21 @@ header a img {
     width: 100%;
 }
 
-.fleche{
+.fleche {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
- }
- 
- .fleche>a{
-     margin: auto;
- }
- 
- .fleche>a>img{
-     width: 100px;
- }
- 
+}
+
+.fleche>a {
+    margin: auto;
+}
+
+.fleche>a>img {
+    width: 100px;
+}
+
 
 @media screen and (min-width: 720px) {
     .burger>div>span {
@@ -225,69 +219,57 @@ header a img {
         margin-right: 50px;
     }
 
+    .content-top {
+        margin-top: 400px;
+    }
+
     .content-top>h1 {
-        font-size: 16rem;
+        font-size: 6rem;
         margin: 47px auto;
     }
 
-    .content-top>h2 {
-        height: 126px;
-        font-size: 8rem;
-        margin-bottom: 99px;
-        
+    .content-top>h1::before {
+        height: 400px;
+        width: 400px;
     }
 
-    .content-top>.japon::after {
-        height: 550px;
-        width: 550px;
-        top: -50%;
+    .japon {
+        margin-top: 400px;
     }
 
-    .content-top>.japon {
-        width: 90%;
-        margin: auto;
-    }
-
-    .content-top>.japon>h3 {
+    .japon h3 {
         font-size: 1.5rem;
-        margin-bottom: 30px;
-        
-    }
-
-    .content-top>.japon>h3:nth-child(2) {
-        font-size: 1.5rem;
+        margin: 40px 0;
     }
 
     .competences {
-        margin-top: 300px;
+        margin-top: 50px;
+        padding-top: 200px;
         width: 90%;
+        position: relative;
     }
 
-    .competences>article>h2 {
+    .competences h2 {
         font-size: 13rem;
+        position: absolute;
+        top: 35px;
     }
 
-    .competences>article>h3 {
-        font-size: 2rem;
-        margin-top: -45px;
+    .competences>figure {
+        width: 62%;
+        position: absolute;
+        left: -76px;
+        top: 183px;
     }
 
-    .competences .icon {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    .competences>.icon {
         width: 50%;
-        margin-left: 70%;
-
-        margin-top: -619px;
+        margin-left: 50%;
     }
 
-    .competences img {
-        width: 82%;
-        margin-left: -80px;
-    }
-
-    .competences>h2 {
-        text-align: center;
+    .competences>h3 {
+        text-align: end;
+        font-size: 2rem;
     }
 }
 
@@ -319,35 +301,39 @@ header a img {
         font-family: 'Roboto', sans-serif;
     }
 
-    .content-top>.japon>h3 {
+    .content-top>h1::before {
+        height: 500px;
+        width: 500px;
+    }
+
+    .content-top>h1 {
+        font-size: 10rem;
+    }
+
+    .japon h3 {
         font-size: 2rem;
+        margin: 40px 0;
     }
 
-    .content-top>.japon>h3:nth-child(2) {
-        font-size: 2rem;
+    .competences {
+        padding-top: 400px;
     }
 
-    .competences>article>h2 {
-        font-size: 24rem;
+    .competences h2 {
+        font-size: 23rem;
+        position: absolute;
+        top: 0px;
     }
 
-    .competences>article>h3 {
-        font-size: 3rem;
-        margin-top: -90px;
-    }
-
-    .competences img {
+    .competences>figure {
         width: 54%;
-        margin-left: -80px;
     }
 
-    .competences .icon {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        width: 52%;
-        margin-left: 58%;
-        margin-top: -704px;
-      }
+    .competences>h3 {
+        text-align: end;
+        font-size: 4rem;
+    }
+
 }
 
 @media screen and (min-width:1500px) {
@@ -355,8 +341,89 @@ header a img {
         left: 900px;
     }
 
+    .competences {
+        width: 80%;
+        margin: auto;
+    }
+
+    .japon {
+        width: 80%;
+        margin: auto;
+        margin-top: 400px;
+    }
+
+    .competences>h2 {
+        font-size: 27rem;
+    }
+
     .competences>article>h2 {
         text-align: center;
     }
 
+}
+
+@media screen and (min-width:2060px) {
+    header {
+        background-color: black;
+        height: 200px;
+    }
+
+    header a img {
+        width: 153px;
+        margin: 10px;
+    }
+
+    .burger>.content {
+        left: 2244px;
+        top: 50px;
+        width: 30%;
+    }
+
+    .burger>.content>ul>li>a {
+        color: white;
+        font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .japon {
+        margin-top: 600px;
+    }
+
+    .japon h3 {
+        font-size: 4rem;
+        margin: 40px 0;
+    }
+
+    .content-top {
+        margin-top: 900px;
+    }
+
+    .content-top>h1::before {
+        height: 1200px;
+        width: 1200px;
+    }
+
+    .content-top>h1 {
+        font-size: 26rem;
+      }
+
+    .competences {
+        padding-top: 939px;
+    }
+
+    .competences>h3 {
+        text-align: end;
+        font-size: 10rem;
+    }
+
+    .competences>h2 {
+        font-size: 56rem;
+    }
+
+    .competences>figure {
+        width: 62%;
+        position: absolute;
+        left: -177px;
+        top: 529px;
+    }
 }

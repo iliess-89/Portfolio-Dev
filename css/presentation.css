@@ -106,62 +106,76 @@ header a img {
 }
 
 .content-top {
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .content-top>h1 {
-    transform: rotate(-15deg);
     color: black;
-    font-size: 13rem;
+    font-size: 3rem;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    height: 197px;
-}
-
-.content-top>h2 {
-    color: black;
-    font-size: 7rem;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-.japon {
-    text-align: center;
-}
-
-.japon>h3 {
-    width: 100%;
-    padding-bottom: 29px;
     position: relative;
-    font-family: 'Roboto', sans-serif;
 }
 
-.japon>h3::before {
+.content-top>h1::before {
     content: "";
     position: absolute;
     background-color: red;
     border-radius: 100%;
     height: 300px;
     width: 300px;
-    top: -80%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
     z-index: -1;
 
 }
 
+.japon {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.japon>h2 {
+    transform: rotate(-10deg);
+    color: rgba(0, 0, 0, 0.537);
+    font-size: 3.6rem;
+}
+
+.japon>h3 {
+    transform: rotate(-10deg);
+    width: 100%;
+    padding-bottom: 29px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
 .japon>a {
-    border: solid 2px black;
+    border: solid 4px black;
     color: black;
     font-weight: bolder;
-    padding: 5px 30px;
+    padding: 8px 35px;
     font-size: 1.5rem;
     text-decoration: none;
+    position: relative;
+}
 
+.japon>a::before {
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 .presentation {
     padding-top: 100px;
+    position: relative;
 }
 
 .presentation>h2 {
@@ -176,10 +190,16 @@ header a img {
 
 }
 
-.presentation>img {
-    width: 295px;
-    margin-top: -133px;
+.presentation>figure {
+    width: 200px;
+    margin: auto;
     position: absolute;
+    top: 160px;
+    left: 5%;
+}
+
+.presentation>figure>img {
+    width: 100%;
 }
 
 .presentation>.content {
@@ -187,7 +207,6 @@ header a img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     background: rgb(0, 212, 255);
     background: linear-gradient(263deg, rgba(0, 212, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
     height: 200px;
@@ -239,18 +258,18 @@ header a img {
     width: 90%;
 }
 
-.fleche{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+.fleche {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.fleche>a{
+.fleche>a {
     margin: auto;
 }
 
-.fleche>a>img{
+.fleche>a>img {
     width: 100px;
 }
 
@@ -276,31 +295,45 @@ header a img {
         margin-right: 50px;
     }
 
+    .content-top {
+        margin-top: 400px;
+    }
+
     .content-top>h1 {
-        font-size: 16rem;
-        margin: auto;
+        font-size: 6rem;
+        margin: 47px auto;
     }
 
-    .content-top>.japon>h3 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-
+    .content-top>h1::before {
+        height: 400px;
+        width: 400px;
     }
 
-    .content-top>.japon>a {
+    .japon {
+        margin-top: 411px;
+    }
+
+    .japon>h2 {
+        transform: rotate(-10deg);
+        color: rgba(0, 0, 0, 0.537);
+        font-size: 8rem;
+    }
+
+    .japon>h3 {
+        font-size: 1.8rem;
+        text-align: start;
+        margin: 0 30px;
+        margin-bottom: 70px;
+    }
+
+    .japon>a {
         font-size: 2rem;
         padding: 10px 45px;
     }
 
-    .content-top>.japon>h3::before {
-        height: 550px;
-        width: 550px;
-        top: -100%;
-    }
-
-    .content-top>h1 {
-        font-size: 16rem;
-        margin: 47px auto;
+    .japon>a::before {
+        height: 50px;
+        width: 50px;
     }
 
     .content-top>h2 {
@@ -309,30 +342,31 @@ header a img {
         margin-bottom: 99px;
     }
 
-    .content-top {
-        margin-top: 100px;
-    }
-
     .presentation {
-        padding: 200px 0;
+        margin-top: 100px;
+        position: relative;
+        margin-bottom: 500px;
     }
 
     .presentation>h2 {
         font-size: 23rem;
-        width: 100%;
         display: flex;
         justify-content: center;
     }
 
-    .presentation>img {
-        width: 450px;
-        margin-top: -257px;
+    .presentation>figure {
+        width: 45%;
         position: absolute;
-        margin-left: 10px;
+        top: 240px;
+        left: 40px;
     }
 
     .presentation>.content {
-        margin-top: -10px;
+        height: 200px;
+        position: absolute;
+        top: 330px;
+        margin-bottom: 300px;
+        z-index: -1;
     }
 
     .presentation>.content>p {
@@ -396,35 +430,37 @@ header a img {
         font-family: 'Roboto', sans-serif;
     }
 
-    .content-top>.japon>h3::before {
-        top: -202%;
+    .content-top>h1 {
+        font-size: 10rem;
     }
 
-    .content-top>.japon>a:hover {
-        color: white;
-        background-color: black;
-        transition: .3s;
+    .content-top>h1::before {
+        height: 500px;
+        width: 500px;
     }
 
-    .content-top>h2 {
-        margin-bottom: 151px;
+    .japon>h2 {
+        font-size: 15rem;
+    }
+
+    .japon>h3 {
+        font-size: 2rem;
+    }
+
+    .presentation {
+        margin-top: 200px;
     }
 
     .presentation>h2 {
         font-size: 37rem;
         transform: rotate(-5deg);
-        margin-left: -64px;
-    }
 
-    .presentation>img {
-        width: 780px;
-        margin-left: -31px;
-        margin-top: -536px;
     }
 
     .presentation>.content {
-        margin-top: -94px;
+        width: 100%;
         height: 300px;
+        top: 550px;
     }
 
     .presentation>.content>p {
@@ -460,9 +496,14 @@ header a img {
         left: 900px;
     }
 
+    .japon>h2 {
+        font-size: 20rem;
+    }
+
     .japon>h3 {
-        width: 50%;
+        width: 90%;
         margin: auto;
+        margin-bottom: 80px;
     }
 
     .content-top>.japon>h3::before {
@@ -472,4 +513,128 @@ header a img {
     .presentation>h2 {
         font-size: 43rem;
     }
+
+    .presentation>figure {
+        width: 601px;
+        position: absolute;
+        top: 347px;
+        left: 300px;
+    }
+
+    .presentation>.content {
+        width: 100%;
+        height: 350px;
+        top: 634px;
+    }
+
+    .parkour>h2 {
+        font-size: 19rem;
+        margin-bottom: -121px;
+    }
+}
+
+@media screen and (min-width:2000px) {
+    header {
+        background-color: black;
+        height: 200px;
+    }
+
+    header a img {
+        width: 153px;
+        margin: 10px;
+    }
+
+    .burger>.content {
+        left: 2244px;
+        top: 50px;
+        width: 30%;
+      }
+
+      .burger>.content>ul>li>a {
+        color: white;
+        font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      .content-top {
+        margin-top: 900px;
+      }
+
+      .content-top>h1 {
+        font-size: 26rem;
+      }
+
+      .content-top>h1::before {
+        height: 1200px;
+        width: 1200px;
+      }
+
+      .japon{
+          margin-top: 1000px;
+      }
+
+      .japon>h2 {
+        font-size: 39rem;
+      }
+
+      .japon>h3 {
+        font-size: 8rem;
+        margin-left: 200px;
+        margin-bottom: 200px;
+      }
+
+      .japon>a {
+        padding: 44px 141px;
+        font-size: 6rem;
+      }
+
+      .japon>a::before{
+          height: 150px;
+          width: 150px;
+          border-radius: 50%;
+      }
+
+      .presentation{
+          margin: 900px 0;
+      }
+
+      .presentation > h2 {
+        font-size: 100rem;
+      }
+
+      .presentation>.content {
+        width: 100%;
+        height: 700px;
+        top: 934px;
+      }
+
+      .presentation>.content>p{
+        font-size: 5rem;
+      }
+
+      .presentation > figure {
+        width: 1199px;
+        position: absolute;
+        top: 347px;
+        left: 200px;
+      }
+
+      .parkour>.table{
+        padding-top: 254px;
+      }
+
+      .parkour>.table>div>p {
+        margin-left: 70px;
+        font-size: 5rem;
+      }
+
+      .parkour>.table>div>h3 {
+        margin-left: 30px;
+        font-size: 5rem;
+      }
+
+      .parkour>h2 {
+        font-size: 39rem;
+        margin-bottom: -225px;
+      }
 }

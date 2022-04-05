@@ -4,17 +4,21 @@
 }
 
 body {
-    height: 100vh;
     width: 100%;
-    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
+    background-color: black;
     width: 100%;
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
 }
 
 header a img {
@@ -101,47 +105,13 @@ header a img {
     color: white;
 }
 
-video {
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-}
 
-.texte {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    bottom: 40%;
-    transform: rotate(-5deg);
-}
-
-
-.texte h1 {
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 13;
-}
-
-.texte h2 {
-    position: relative;
-    font-family: 'Roboto', sans-serif;
-    font-size: 10rem;
-    color: rgba(0, 0, 0, 0.61);
-
-}
 
 @media screen and (min-width: 720px) {
     .burger>div>span {
         width: 65px;
         height: 7px;
         top: -17px;
-
     }
 
     .burger>div>span::after {
@@ -157,22 +127,27 @@ video {
         margin-right: 50px;
     }
 
-    .texte {
-        bottom: 25%;
-        width: 100%;
-
+    .content-top {
+        margin-top: 400px;
     }
 
-    .texte h1 {
-        font-size: 4rem;
+    .content-top>h1 {
+        font-size: 6rem;
+        margin: 47px auto;
     }
 
-    .texte h2 {
-        font-size: 23rem;
+    .content-top>h1::before {
+        height: 400px;
+        width: 400px;
     }
+
 }
 
 @media screen and (min-width:1020px) {
+    header {
+        background-color: black;
+    }
+
     .burger>div {
         display: none;
     }
@@ -181,7 +156,8 @@ video {
         display: block;
         background: none;
         top: 0px;
-        left: 603px;
+        left: 445px;
+        width: 50%;
     }
 
     .burger>.content>ul {
@@ -198,39 +174,6 @@ video {
         font-family: 'Roboto', sans-serif;
     }
 
-    .texte {
-        bottom: 1%;
-        width: 100%;
-
-    }
-
-    .texte h1 {
-        font-size: 7rem;
-    }
-
-    .texte h2 {
-        font-size: 39rem;
-    }
-
-    .fleche {
-        position: absolute;
-        text-align: center;
-        color: white;
-        font-size: 1.3rem;
-        bottom: 20px;
-        left: 50%;
-        transform: translate(-50%);
-    }
-
-    .fleche h3 {
-        margin: 5px;
-    }
-
-    .fleche img {
-        width: 60px;
-        color: white;
-        background-color: white;
-    }
 }
 
 @media screen and (min-width:1500px) {
@@ -238,57 +181,42 @@ video {
         left: 900px;
     }
 
-    .texte {
-        bottom: 1%;
-        width: 100%;
-
-    }
-
-    .texte h1 {
-        font-size: 9rem;
-    }
-
-    .texte h2 {
-        font-size: 48rem;
-    }
-
 }
 
 @media screen and (min-width:2000px) {
-
     header {
+        background-color: black;
         height: 200px;
     }
 
     header a img {
         width: 153px;
-        margin: 23px;
+        margin: 10px;
     }
 
     .burger>.content {
         left: 2244px;
         top: 50px;
         width: 30%;
-    }
+      }
 
-    .burger>.content>ul>li>a {
+      .burger>.content>ul>li>a {
         color: white;
         font-size: 3rem;
         font-family: 'Roboto', sans-serif;
-    }
+      }
+      
+      .content-top {
+        margin-top: 900px;
+      }
 
-    .texte {
-        bottom: 20%;
-        width: 100%;
+      .content-top>h1 {
+        font-size: 26rem;
+      }
 
-    }
-
-    .texte h1 {
-        font-size: 10rem;
-    }
-
-    .texte h2 {
-        font-size: 63rem;
-    }
+      .content-top>h1::before {
+        height: 1200px;
+        width: 1200px;
+      }
 
 }

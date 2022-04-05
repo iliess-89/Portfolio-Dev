@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
 }
 
-main{
+main {
     overflow: hidden;
 }
 
@@ -108,39 +108,26 @@ header a img {
     margin-top: 200px;
 }
 
-.japon {
+.japon>h1 {
     position: relative;
+    color: black;
+    font-size: 4.8rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 72px;
 }
 
-.japon::after {
+.japon>h1::after {
     content: "";
     position: absolute;
     background-color: red;
     border-radius: 100%;
     height: 300px;
     width: 300px;
-    top: -37%;
     left: 50%;
-    transform: translate(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: -1;
-}
-
-.japon>h1 {
-    transform: rotate(-6deg);
-    color: black;
-    font-size: 5rem;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    height: 72px;
-}
-
-.japon>h2 {
-    transform: rotate(-5deg);
-    color: rgba(0, 0, 0, 0.436);
-    font-size: 5rem;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-
 }
 
 .social {
@@ -151,10 +138,10 @@ header a img {
     display: block;
     height: 50px;
     margin: 50px auto;
-    
+
 }
 
-.social>article{
+.social>article {
     display: flex;
     justify-content: center;
 }
@@ -166,66 +153,96 @@ header a img {
 
 .social>article>a:nth-child(2) {
     margin-left: 200px;
-} 
-
-.social>img {
-    width: 100%;
-    margin-top: -112px;
 }
 
-.formulaire{
+.social {
+    position: relative;
+    padding-bottom: 400px;
+
+}
+
+.social>figure {
+    width: 70%;
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+.social>figure>img {
+    width: 100%;
+}
+
+.social::before {
+    position: absolute;
+    content: "";
+    background-color: red;
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+    top: 53px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+.formulaire {
     margin: auto;
     width: 90%;
 }
 
-.formulaire>img{
+.formulaire>figure>img {
     width: 100%;
 }
 
-form>div>label{
+form>div>label {
     font-size: 1.3rem;
 }
 
-form>div>label{
+form>div>label {
     display: flex;
 }
 
-form>.name>div>label{
+form>.name>div>label {
     font-size: 1.3rem;
     display: flex;
 }
 
-form{
+form {
     text-align: center;
 }
 
-form>.name{
-   display: flex;
+form>.name {
+    display: flex;
 }
 
-form>.name>div:nth-child(2){
+form>.name>div:nth-child(2) {
     margin-left: 40px;
 }
 
-form>.name>div>input{
+form>.name>div>input {
     border: solid 1px black;
     width: 100%;
     height: 30px;
+    font-size: 1.2rem;
 }
 
-form>div>input{
+form>div>input {
     border: solid 1px black;
     width: 100%;
     height: 30px;
+    font-size: 1.2rem;
 }
 
-form>div>textarea{
+form>div>textarea {
     border: solid 1px black;
     width: 100%;
     height: 150px;
+    font-size: 1.2rem;
 }
 
-form>button{
+form>button {
     border: solid 2px black;
     background-color: white;
     font-size: 1.4rem;
@@ -233,20 +250,20 @@ form>button{
     padding: 5px 30px;
 }
 
-.fleche{
+.fleche {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
- }
- 
- .fleche>a{
-     margin: auto;
- }
- 
- .fleche>a>img{
-     width: 100px;
- }
+}
+
+.fleche>a {
+    margin: auto;
+}
+
+.fleche>a>img {
+    width: 100px;
+}
 
 @media screen and (min-width: 720px) {
     .burger>div>span {
@@ -269,11 +286,75 @@ form>button{
         margin-right: 50px;
     }
 
+    .content-top {
+        margin-top: 400px;
+    }
+
     .content-top>.japon::after {
         height: 550px;
         width: 550px;
         top: -50%;
-      }
+    }
+
+    .content-top>.japon>h1::after {
+        height: 400px;
+        width: 400px;
+    }
+
+    .japon>h1 {
+        font-size: 6rem;
+    }
+
+    .social {
+        margin: 400px 0;
+    }
+
+    .social>article>a:nth-child(2) {
+        margin-left: 450px;
+    }
+
+    .social>figure {
+        width: 60%;
+        top: 103px;
+    }
+
+    .social::before {
+        height: 400px;
+        width: 400px;
+        top: 100px;
+    }
+
+    .social>a>img {
+        margin: 176px auto;
+        height: 80px;
+    }
+
+    .social>article>a>img {
+        height: 80px;
+    }
+
+    form>.name>div {
+        margin: auto;
+        width: 100%;
+    }
+
+    form>.name>div>input {
+        width: 100%;
+        height: 40px;
+    }
+
+    form>div>input {
+        height: 40px;
+    }
+
+    form>div>textarea {
+        height: 300px;
+    }
+
+    form>button {
+        font-size: 1.7rem;
+    }
+
 }
 
 @media screen and (min-width:1020px) {
@@ -303,10 +384,174 @@ form>button{
         font-family: 'Roboto', sans-serif;
     }
 
+    .content-top>.japon>h1 {
+        font-size: 10rem;
+    }
+
+    .content-top>.japon>h1::after {
+        height: 500px;
+        width: 500px;
+        top: 100%;
+    }
+
+    .social>figure {
+        width: 41%;
+        top: 103px;
+    }
+
+    .formulaire {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 50px;
+
+    }
+
+    .formulaire>form {
+        margin-top: 100px;
+    }
+
+    .formulaire>form>div {
+        margin-bottom: 20px;
+    }
+
+    .formulaire>form>div>label {
+        font-size: 1.7rem;
+    }
+
+    .formulaire>form>.name>div>label {
+        font-size: 1.7rem;
+    }
+
+
+    .formulaire>form>.name>div>input {
+        height: 50px;
+    }
+
+    .formulaire>form>div>input {
+        height: 50px;
+    }
 }
 
 @media screen and (min-width:1500px) {
     .burger>.content {
         left: 900px;
     }
+
+    .social>figure {
+        width: 28%;
+        top: 103px;
+    }
+
+    .formulaire>form {
+        margin-top: 300px;
+    }
+}
+
+@media screen and (min-width:2000px) {
+    header {
+        background-color: black;
+        height: 200px;
+    }
+
+    header a img {
+        width: 153px;
+        margin: 18px;
+    }
+
+    .burger>.content {
+        left: 2244px;
+        top: 50px;
+        width: 30%;
+    }
+
+    .burger>.content>ul>li>a {
+        color: white;
+        font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .content-top>.japon>h1 {
+        font-size: 26rem;
+    }
+
+    .content-top {
+        margin-top: 900px;
+    }
+
+    .content-top>.japon>h1::after {
+        height: 1200px;
+        width: 1200px;
+        top: 100%;
+    }
+
+    .social{
+        margin-top: 1300px;
+    }
+
+    .social>a>img {
+        height: 194px;
+        margin-bottom: 300px;
+    }
+
+    .social>article>a>img {
+        height: 194px;
+      }
+
+    .social>article>a:nth-child(2) {
+        margin-left: 1000px;
+    }
+
+    .social{
+        margin-bottom: 900px;
+    }
+
+    .social::before {
+        height: 800px;
+        width: 800px;
+        top: 260px;
+    }
+
+      .social > figure {
+        width: 28%;
+        top: 273px;
+      }
+      
+      .content-top>.japon>h1::after {
+        top: 300%;
+      }
+
+      .formulaire>form>.name>div>label {
+        font-size: 5rem;
+      }
+
+      .formulaire>form>.name>div>input {
+        height: 150px;
+        font-size: 4rem;
+      }
+
+      .formulaire>form>div>label {
+        font-size: 5rem;
+      }
+    
+      .formulaire>form>div>input {
+        height: 150px;
+        font-size: 4rem;
+      }
+
+      .formulaire>form>div>textarea {
+        height: 550px;
+        font-size: 4rem;
+      }
+
+      .formulaire>form {
+        margin-top: 600px;
+      }
+
+      form>button {
+        border: solid 2px black;
+        background-color: white;
+        font-size: 4rem;
+        margin: 41px 0;
+        padding: 30px 127px;
+      }
 }
