@@ -442,7 +442,7 @@ footer>.mentions>a{
         background: none;
         top: 0px;
         left: 728px;
-        width: 50%;
+        width: 45%;
       }
 
     .burger>.content>ul {
@@ -526,6 +526,7 @@ footer>.mentions>a{
 @media screen and (min-width:1500px) {
     .burger>.content {
         left: 1150px;
+        width: 35%;
     }
 
     .japon>h2 {
