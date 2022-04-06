@@ -250,20 +250,36 @@ form>button {
     padding: 5px 30px;
 }
 
-.fleche {
+footer{
+    background-color: black;
+    padding: 10px 0;
+}
+
+footer>.reseaux{
+    text-align: center;
+}
+
+footer>.reseaux>a>img{
+    width: 40px;
+    margin: 15px 10px;
+}
+
+footer>.mentions{
     display: flex;
     flex-direction: column;
+}
+
+footer>.mentions>a{
+    color: white;
+    margin: 5px 0;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-decoration: none;
+    display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.fleche>a {
-    margin: auto;
-}
 
-.fleche>a>img {
-    width: 100px;
-}
 
 @media screen and (min-width: 720px) {
     .burger>div>span {
@@ -355,6 +371,23 @@ form>button {
         font-size: 1.7rem;
     }
 
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 8vh;
+        padding: 0;
+    }
+  
+    footer>.reseaux{
+        order: 2;
+    }
+
+    footer>.mentions{
+        order: 1;
+    }
+
 }
 
 @media screen and (min-width:1020px) {
@@ -366,9 +399,9 @@ form>button {
         display: block;
         background: none;
         top: 0px;
-        left: 590px;
+        left: 728px;
         width: 50%;
-    }
+      }
 
     .burger>.content>ul {
         display: flex;
@@ -430,11 +463,15 @@ form>button {
     .formulaire>form>div>input {
         height: 50px;
     }
+
+    footer {
+        height: 9vh;
+    }
 }
 
 @media screen and (min-width:1500px) {
     .burger>.content {
-        left: 900px;
+        left: 1150px;
     }
 
     .social>figure {
@@ -553,5 +590,14 @@ form>button {
         font-size: 4rem;
         margin: 41px 0;
         padding: 30px 127px;
+      }
+
+      footer>.reseaux>a>img{
+        width: 100px;
+        margin: 15px 10px;
+      }
+
+      footer>.mentions>a{
+        font-size: 2.5rem;
       }
 }

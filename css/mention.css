@@ -6,6 +6,7 @@
 body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 header {
@@ -90,6 +91,47 @@ header a img {
     top: 100px;
     text-align: center;
     z-index: 20;
+
+}
+
+main{
+    height: 100vh;
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, 0.594);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 2.6rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 60px 0;
+}
+
+.editeur{
+    margin-top: 70px;
+}
+
+.editeur>h2,h3 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.editeur>h2{
+    color: rgba(0, 0, 0, 0.623);
+}
+
+.hebergeur>h2{
+    color: rgba(0, 0, 0, 0.642);
+
+}
+
+.hebergeur>h2>span{
+    color: black;
+}
+
+.hebergeur>h2,p{
+    margin: 20px 0;
+    font-size: 1.1rem;
 }
 
 .burger .content>ul>li {
@@ -105,6 +147,34 @@ header a img {
     color: white;
 }
 
+footer {
+    background-color: black;
+    padding: 10px 0;
+}
+
+footer>.reseaux {
+    text-align: center;
+}
+
+footer>.reseaux>a>img {
+    width: 40px;
+    margin: 15px 10px;
+}
+
+footer>.mentions {
+    display: flex;
+    flex-direction: column;
+}
+
+footer>.mentions>a {
+    color: white;
+    margin: 5px 0;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
 
 
 @media screen and (min-width: 720px) {
@@ -141,6 +211,41 @@ header a img {
         width: 400px;
     }
 
+    h1{
+        font-size: 5.6rem;
+    }
+
+    .editeur{
+        margin-top: 80px;
+    }
+
+    .editeur>h2,h3{
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .hebergeur>h2,p{
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 8vh;
+        padding: 0;
+    }
+
+    footer>.reseaux {
+        order: 2;
+    }
+
+    footer>.mentions {
+        order: 1;
+    }
+
 }
 
 @media screen and (min-width:1020px) {
@@ -156,7 +261,7 @@ header a img {
         display: block;
         background: none;
         top: 0px;
-        left: 445px;
+        left: 728px;
         width: 50%;
     }
 
@@ -170,17 +275,40 @@ header a img {
 
     .burger>.content>ul>li>a {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-family: 'Roboto', sans-serif;
+    }
+
+    h1{
+        font-size: 10rem;
+    }
+
+    .editeur{
+        margin-top: 50px;
+    }
+
+    .editeur>h2,h3{
+        font-size: 1.5rem;
+    }
+
+    .hebergeur>h2,p{
+        font-size: 1.5rem;
+    }
+   
+    footer {
+        height: 9vh;
     }
 
 }
 
 @media screen and (min-width:1500px) {
     .burger>.content {
-        left: 900px;
+        left: 1150px;
     }
-
+    
+    h1{
+        font-size: 13rem;
+    }
 }
 
 @media screen and (min-width:2000px) {
@@ -198,25 +326,51 @@ header a img {
         left: 2244px;
         top: 50px;
         width: 30%;
-      }
+    }
 
-      .burger>.content>ul>li>a {
+    .burger>.content>ul>li>a {
         color: white;
         font-size: 3rem;
         font-family: 'Roboto', sans-serif;
-      }
-      
-      .content-top {
+    }
+
+    .content-top {
         margin-top: 900px;
-      }
+    }
 
-      .content-top>h1 {
+    .content-top>h1 {
         font-size: 26rem;
-      }
+    }
 
-      .content-top>h1::before {
+    .content-top>h1::before {
         height: 1200px;
         width: 1200px;
-      }
+    }
+
+    h1{
+        font-size: 24rem;
+    }
+
+    .editeur{
+        margin-top: 100px;
+    }
+
+    .editeur>h2,h3{
+        font-size: 6rem;
+        margin-bottom: 80px;
+    }
+
+    .hebergeur>h2,p{
+        font-size: 5rem;
+    }
+
+    footer>.reseaux>a>img {
+        width: 100px;
+        margin: 15px 10px;
+    }
+
+    footer>.mentions>a {
+        font-size: 2.5rem;
+    }
 
 }

@@ -183,23 +183,39 @@ header a img {
     width: 100%;
 }
 
-.fleche {
+footer{
+    background-color: black;
+    padding: 10px 0;
+}
+
+footer>.reseaux{
+    text-align: center;
+    
+}
+
+footer>.reseaux>a>img{
+    width: 40px;
+    margin: 15px 10px;
+}
+
+footer>.mentions{
     display: flex;
     flex-direction: column;
+    
+}
+
+footer>.mentions>a{
+    color: white;
+    margin: 5px 0;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-decoration: none;
+    display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.fleche>a {
-    margin: auto;
-}
+@media screen and (min-width:720px) {
 
-.fleche>a>img {
-    width: 100px;
-}
-
-
-@media screen and (min-width: 720px) {
     .burger>div>span {
         width: 65px;
         height: 7px;
@@ -271,6 +287,23 @@ header a img {
         text-align: end;
         font-size: 2rem;
     }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 8vh;
+        padding: 0;
+    }
+  
+    footer>.reseaux{
+        order: 2;
+    }
+    
+    footer>.mentions{
+        order: 1;
+    }
 }
 
 @media screen and (min-width:1020px) {
@@ -283,9 +316,9 @@ header a img {
         display: block;
         background: none;
         top: 0px;
-        left: 445px;
+        left: 728px;
         width: 50%;
-    }
+      }
 
     .burger>.content>ul {
         display: flex;
@@ -297,7 +330,7 @@ header a img {
 
     .burger>.content>ul>li>a {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -334,11 +367,14 @@ header a img {
         font-size: 4rem;
     }
 
+    footer {
+        height: 9vh;
+    }
 }
 
 @media screen and (min-width:1500px) {
     .burger>.content {
-        left: 900px;
+        left: 1150px;
     }
 
     .competences {
@@ -426,4 +462,13 @@ header a img {
         left: -177px;
         top: 529px;
     }
+
+    footer>.reseaux>a>img{
+        width: 100px;
+        margin: 15px 10px;
+      }
+
+      footer>.mentions>a{
+        font-size: 2.5rem;
+      }
 }

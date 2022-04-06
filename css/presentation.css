@@ -258,28 +258,40 @@ header a img {
     width: 90%;
 }
 
-.fleche {
+footer{
+    background-color: black;
+    padding: 10px 0;
+}
+
+footer>.reseaux{
+    text-align: center;
+}
+
+footer>.reseaux>a>img{
+    width: 40px;
+    margin: 15px 10px;
+}
+
+footer>.mentions{
     display: flex;
     flex-direction: column;
+}
+
+footer>.mentions>a{
+    color: white;
+    margin: 5px 0;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-decoration: none;
+    display: flex;
     justify-content: center;
-    align-items: center;
 }
-
-.fleche>a {
-    margin: auto;
-}
-
-.fleche>a>img {
-    width: 100px;
-}
-
 
 @media screen and (min-width: 720px) {
     .burger>div>span {
         width: 65px;
         height: 7px;
         top: -17px;
-
     }
 
     .burger>div>span::after {
@@ -397,6 +409,23 @@ header a img {
     .parkour>.table>div {
         margin: 100px 20px;
     }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 8vh;
+        padding: 0;
+    }
+  
+    footer>.reseaux{
+        order: 2;
+    }
+
+    footer>.mentions{
+        order: 1;
+    }
 }
 
 @media screen and (min-width:1020px) {
@@ -412,9 +441,9 @@ header a img {
         display: block;
         background: none;
         top: 0px;
-        left: 445px;
+        left: 728px;
         width: 50%;
-    }
+      }
 
     .burger>.content>ul {
         display: flex;
@@ -426,7 +455,7 @@ header a img {
 
     .burger>.content>ul>li>a {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -488,12 +517,15 @@ header a img {
         margin-left: 70px;
     }
 
+    footer {
+        height: 9vh;
+    }
 
 }
 
 @media screen and (min-width:1500px) {
     .burger>.content {
-        left: 900px;
+        left: 1150px;
     }
 
     .japon>h2 {
@@ -531,6 +563,7 @@ header a img {
         font-size: 19rem;
         margin-bottom: -121px;
     }
+
 }
 
 @media screen and (min-width:2000px) {
@@ -636,5 +669,14 @@ header a img {
       .parkour>h2 {
         font-size: 39rem;
         margin-bottom: -225px;
+      }
+
+      footer>.reseaux>a>img{
+        width: 100px;
+        margin: 15px 10px;
+      }
+
+      footer>.mentions>a{
+        font-size: 2.5rem;
       }
 }

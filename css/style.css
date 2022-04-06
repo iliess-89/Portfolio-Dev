@@ -181,7 +181,7 @@ video {
         display: block;
         background: none;
         top: 0px;
-        left: 603px;
+        left: 472px;
     }
 
     .burger>.content>ul {
@@ -212,25 +212,6 @@ video {
         font-size: 39rem;
     }
 
-    .fleche {
-        position: absolute;
-        text-align: center;
-        color: white;
-        font-size: 1.3rem;
-        bottom: 20px;
-        left: 50%;
-        transform: translate(-50%);
-    }
-
-    .fleche h3 {
-        margin: 5px;
-    }
-
-    .fleche img {
-        width: 60px;
-        color: white;
-        background-color: white;
-    }
 }
 
 @media screen and (min-width:1500px) {
