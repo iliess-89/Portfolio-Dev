@@ -1,4 +1,50 @@
-<!DOCTYPE html>
+<?php 
+
+if (!empty($_POST)) {
+
+    if (
+        isset($_POST["nom"],$_POST["prenom"], $_POST["email"], $_POST["sujet"], $_POST["message"])
+        && !empty($_POST["nom"])
+        && !empty($_POST["prenom"])
+        && !empty($_POST["email"])
+        && !empty($_POST["sujet"])
+        && !empty($_POST["message"])
+
+    ) {
+
+        $nom = strip_tags($_POST["nom"]);
+        $prenom = strip_tags($_POST["prenom"]);
+        $email = strip_tags($_POST["email"]);
+        $sujet = strip_tags($_POST["sujet"]);
+        // on neutralise les balise
+        $message = htmlspecialchars($_POST["message"]);
+
+        // Valider l'email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "L'adresse e-mail n'est pas valide";
+        } else {
+
+            require_once "includes/connexionB.php";
+
+            $sql = "INSERT INTO `contact` (`nom`,`prenom`, `email`,`sujet`, `message`) VALUES (:nom, :prenom, :mail, :sujet, :message);";
+
+            $query = $db->prepare($sql);
+
+            $query->bindValue(":nom", $nom, PDO::PARAM_STR);
+            $query->bindValue(":prenom", $prenom, PDO::PARAM_STR);
+            $query->bindValue(":mail", $_POST["email"]);
+            $query->bindValue(":sujet", $sujet, PDO::PARAM_STR);
+            $query->bindValue(":message", $message, PDO::PARAM_STR);
+
+            $query->execute();
+
+            header("loction: contact.php");
+        }
+    } else {
+        die("le formulaire est incomplet");
+    }
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +78,7 @@
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="presentation.html">Présentation</a></li>
                     <li><a href="competences.html">Compétences</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </section>
         </nav>
@@ -67,28 +113,28 @@
                     <div>
                     <label for="">Nom</label>
                     <div id="messageN"></div>
-                    <input type="text" id="name">
+                    <input type="text" name="nom" id="name">
                     </div>
                     <div>
                         <label for="">Prenom</label>
                         <div id="messageP"></div>
-                        <input type="text" id="prenom">
+                        <input type="text" name="prenom" id="prenom">
                     </div>
                 </div>
                     <div>
                     <label for="">E-mail</label>
                     <div id="message"></div>
-                    <input type="text" id="email">
+                    <input type="text" name="email" id="email">
                 </div>
                 <div>
                     <label for="">Sujet</label>
                     <div id="messageS"></div>
-                    <input type="text" id="sujet"> 
+                    <input type="text" name="sujet" id="sujet"> 
                 </div>
                 <div>
                     <label for="">Message</label>
                     <div id="messageM"></div>
-                    <textarea name="" id="textarea" ></textarea>
+                    <textarea name="" name="message" id="textarea" ></textarea>
                 </div>
                 <button>Envoyez</button>
             </form>
