@@ -215,7 +215,7 @@ header a img {
 
 .presentation>.content>p {
     color: rgba(0, 0, 0, 0.68);
-    margin: 5px;
+    margin: 0px 15px;
 
 }
 
@@ -328,7 +328,7 @@ footer>.mentions>a {
     .japon>h2 {
         transform: rotate(-10deg);
         color: rgba(0, 0, 0, 0.537);
-        font-size: 8rem;
+        font-size: 7rem;
     }
 
     .japon>h3 {
@@ -388,7 +388,7 @@ footer>.mentions>a {
     }
 
     .parkour>h2 {
-        font-size: 9rem;
+        font-size: 8rem;
     }
 
     .parkour>.table {
@@ -417,7 +417,7 @@ footer>.mentions>a {
         justify-content: space-around;
         align-items: center;
         height: 10vh;
-        padding: 0;
+        margin-top: 20px;
     }
 
     footer>.reseaux {

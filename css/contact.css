@@ -361,16 +361,6 @@ footer>.mentions>a{
         width: 80px;
     }
 
-    /* form>.name>div {
-        margin: auto;
-        width: 100%;
-    }
-
-    form>.name>div>input {
-        width: 100%;
-        height: 40px;
-    } */
-
     form>div>input {
         height: 40px;
     }
@@ -388,7 +378,7 @@ footer>.mentions>a{
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        height: 8vh;
+        height: 10vh;
         padding: 0;
     }
   
