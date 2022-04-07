@@ -134,21 +134,29 @@ header a img {
     margin-top: 200px;
 }
 
-.social>a>img {
+.social>a {
     display: block;
-    height: 50px;
+    width: 50px;
     margin: 50px auto;
+}
 
+.social>a>img {
+    width: 100%;
 }
 
 .social>article {
     display: flex;
     justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+.social>article>a {
+    width: 50px;
 }
 
 .social>article>a>img {
     width: 100%;
-    height: 50px;
 }
 
 .social>article>a:nth-child(2) {
@@ -162,7 +170,7 @@ header a img {
 }
 
 .social>figure {
-    width: 70%;
+    width: 250px;
     position: absolute;
     top: 62px;
     left: 50%;
@@ -172,6 +180,7 @@ header a img {
 
 .social>figure>img {
     width: 100%;
+    object-fit: cover;
 }
 
 .social::before {
@@ -194,6 +203,7 @@ header a img {
 
 .formulaire>figure>img {
     width: 100%;
+    object-fit: cover;
 }
 
 form>div>label {
@@ -217,14 +227,19 @@ form>.name {
     display: flex;
 }
 
-form>.name>div:nth-child(2) {
+ form>.name>div:nth-child(2) {
     margin-left: 40px;
 }
 
+form>.name>div {
+    margin: auto;
+    width: 100%;
+}
+
 form>.name>div>input {
-    border: solid 1px black;
     width: 100%;
     height: 30px;
+    border: solid 1px black;
     font-size: 1.2rem;
 }
 
@@ -279,14 +294,11 @@ footer>.mentions>a{
     justify-content: center;
 }
 
-
-
 @media screen and (min-width: 720px) {
     .burger>div>span {
         width: 65px;
         height: 7px;
         top: -17px;
-
     }
 
     .burger>div>span::after {
@@ -340,16 +352,16 @@ footer>.mentions>a{
         top: 100px;
     }
 
-    .social>a>img {
+    .social>article>a {
         margin: 176px auto;
-        height: 80px;
+        width: 80px;
+    }
+   
+    .social>a {
+        width: 80px;
     }
 
-    .social>article>a>img {
-        height: 80px;
-    }
-
-    form>.name>div {
+    /* form>.name>div {
         margin: auto;
         width: 100%;
     }
@@ -357,7 +369,7 @@ footer>.mentions>a{
     form>.name>div>input {
         width: 100%;
         height: 40px;
-    }
+    } */
 
     form>div>input {
         height: 40px;
@@ -390,7 +402,7 @@ footer>.mentions>a{
 
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1358px) {
     .burger>div {
         display: none;
     }
@@ -427,6 +439,15 @@ footer>.mentions>a{
         top: 100%;
     }
 
+    .social>article>a {
+        margin: 116px auto;
+        width: 90px;
+    }
+
+    .social>article>a:nth-child(2) {
+        margin-left: 250px;
+    }
+    
     .social>figure {
         width: 41%;
         top: 103px;
@@ -474,6 +495,10 @@ footer>.mentions>a{
         left: -45px;
     }
 
+    .social>article>a:nth-child(2) {
+        margin-left: 50px;
+    }
+
     .social>figure {
         width: 28%;
         top: 103px;
@@ -484,7 +509,7 @@ footer>.mentions>a{
     }
 }
 
-@media screen and (min-width:2000px) {
+@media screen and (min-width:3060px) {
     header {
         background-color: black;
         height: 200px;
@@ -522,17 +547,17 @@ footer>.mentions>a{
         margin-top: 1300px;
     }
 
-    .social>a>img {
-        height: 194px;
+    .social>a {
+        width: 194px;
         margin-bottom: 300px;
     }
 
-    .social>article>a>img {
-        height: 194px;
+    .social>article>a {
+        width: 194px;
       }
 
     .social>article>a:nth-child(2) {
-        margin-left: 1000px;
+        margin-left: 50px;
     }
 
     .social{
@@ -545,7 +570,7 @@ footer>.mentions>a{
         top: 260px;
     }
 
-      .social > figure {
+      .social>figure {
         width: 28%;
         top: 273px;
       }

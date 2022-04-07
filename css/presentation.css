@@ -151,10 +151,10 @@ header a img {
 }
 
 .japon>a {
-    border: solid 4px black;
+    border: solid 2px rgba(0, 0, 0, 0.486);
     color: black;
     font-weight: bolder;
-    padding: 8px 35px;
+    padding: 15px 35px;
     font-size: 1.5rem;
     text-decoration: none;
     position: relative;
@@ -340,7 +340,7 @@ footer>.mentions>a {
 
     .japon>a {
         font-size: 2rem;
-        padding: 10px 45px;
+        padding: 20px 45px;
     }
 
     .japon>a::before {
@@ -374,7 +374,8 @@ footer>.mentions>a {
     }
 
     .presentation>.content {
-        height: 200px;
+        height: 250px;
+        width: 100%;
         position: absolute;
         top: 330px;
         margin-bottom: 300px;
@@ -415,7 +416,7 @@ footer>.mentions>a {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        height: 8vh;
+        height: 10vh;
         padding: 0;
     }
 
@@ -428,7 +429,7 @@ footer>.mentions>a {
     }
 }
 
-@media screen and (min-width:1158px) {
+@media screen and (min-width:1358px) {
     header {
         background-color: black;
     }
@@ -474,6 +475,11 @@ footer>.mentions>a {
 
     .japon>h3 {
         font-size: 2rem;
+    }
+
+    .japon>a {
+        font-size: 2rem;
+        padding: 20px 47px;
     }
 
     .presentation {
@@ -568,7 +574,7 @@ footer>.mentions>a {
 
 }
 
-@media screen and (min-width:2000px) {
+@media screen and (min-width:3060px) {
 
     header {
         background-color: black;
@@ -617,10 +623,11 @@ footer>.mentions>a {
         margin-bottom: 200px;
     }
 
-    .japon>a {
-        padding: 44px 141px;
+    .japon > a {
+        padding: 64px 141px;
         font-size: 6rem;
-    }
+        border: solid 6px #00000075;
+      }
 
     .japon>a::before {
         height: 150px;

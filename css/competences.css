@@ -284,7 +284,8 @@ footer>.mentions>a{
     }
 
     .competences>h3 {
-        text-align: end;
+        width: 50%;
+        margin-left: 50%;
         font-size: 2rem;
     }
 
@@ -293,7 +294,7 @@ footer>.mentions>a{
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        height: 8vh;
+        height: 10vh;
         padding: 0;
     }
   
@@ -306,7 +307,7 @@ footer>.mentions>a{
     }
 }
 
-@media screen and (min-width:1158px) {
+@media screen and (min-width:1358px) {
 
     .burger>div {
         display: none;
@@ -399,7 +400,7 @@ footer>.mentions>a{
 
 }
 
-@media screen and (min-width:2060px) {
+@media screen and (min-width:3060px) {
     header {
         background-color: black;
         height: 200px;

@@ -248,7 +248,7 @@ footer>.mentions>a {
 
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1358px) {
     header {
         background-color: black;
     }
@@ -311,7 +311,7 @@ footer>.mentions>a {
     }
 }
 
-@media screen and (min-width:2000px) {
+@media screen and (min-width:3060px) {
     header {
         background-color: black;
         height: 200px;

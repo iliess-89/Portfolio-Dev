@@ -105,23 +105,26 @@ video {
     height: 100vh;
     width: 100%;
     object-fit: cover;
+    overflow: hidden;
+}
+
+.content-texte{
+    width: 90%;
+    margin: auto;  
 }
 
 .texte {
     position: absolute;
-    text-align: center;
-    width: 100%;
     bottom: 40%;
     transform: rotate(-5deg);
 }
-
 
 .texte h1 {
     position: absolute;
     color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
-    width: 100%;
+    width: 90%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -133,7 +136,6 @@ video {
     font-family: 'Roboto', sans-serif;
     font-size: 10rem;
     color: rgba(0, 0, 0, 0.61);
-
 }
 
 @media screen and (min-width: 720px) {
@@ -159,7 +161,6 @@ video {
 
     .texte {
         bottom: 25%;
-        width: 100%;
 
     }
 
@@ -168,11 +169,11 @@ video {
     }
 
     .texte h2 {
-        font-size: 23rem;
+        font-size: 22rem;
     }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1358px) {
     .burger>div {
         display: none;
     }
@@ -200,9 +201,7 @@ video {
     }
 
     .texte {
-        bottom: 1%;
-        width: 100%;
-
+        bottom: 0%;
     }
 
     .texte h1 {
@@ -215,15 +214,10 @@ video {
 
 }
 
-@media screen and (min-width:1500px) {
+@media screen and (min-width: 1700px) {
+    
     .burger>.content {
         left: -45px;
-    }
-
-    .texte {
-        bottom: 1%;
-        width: 100%;
-
     }
 
     .texte h1 {
@@ -236,7 +230,7 @@ video {
 
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 3060px) {
 
     header {
         height: 200px;
@@ -259,8 +253,6 @@ video {
 
     .texte {
         bottom: 20%;
-        width: 100%;
-
     }
 
     .texte h1 {
@@ -268,7 +260,7 @@ video {
     }
 
     .texte h2 {
-        font-size: 63rem;
+        font-size: 73rem;
     }
 
 }
