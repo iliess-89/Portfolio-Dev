@@ -172,16 +172,17 @@ video {
     }
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width: 1300px) {
     .burger>div {
         display: none;
     }
 
     .burger>.content {
         display: block;
+        position: relative;
         background: none;
-        top: 0px;
-        left: 472px;
+        top: 0;
+        left: -25px;
     }
 
     .burger>.content>ul {
@@ -216,7 +217,7 @@ video {
 
 @media screen and (min-width:1500px) {
     .burger>.content {
-        left: 900px;
+        left: -45px;
     }
 
     .texte {
@@ -235,7 +236,7 @@ video {
 
 }
 
-@media screen and (min-width:2000px) {
+@media screen and (min-width: 2000px) {
 
     header {
         height: 200px;
@@ -247,9 +248,7 @@ video {
     }
 
     .burger>.content {
-        left: 2244px;
-        top: 50px;
-        width: 30%;
+        left: -150px;
     }
 
     .burger>.content>ul>li>a {

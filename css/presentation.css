@@ -258,26 +258,26 @@ header a img {
     width: 90%;
 }
 
-footer{
+footer {
     background-color: black;
     padding: 10px 0;
 }
 
-footer>.reseaux{
+footer>.reseaux {
     text-align: center;
 }
 
-footer>.reseaux>a>img{
+footer>.reseaux>a>img {
     width: 40px;
     margin: 15px 10px;
 }
 
-footer>.mentions{
+footer>.mentions {
     display: flex;
     flex-direction: column;
 }
 
-footer>.mentions>a{
+footer>.mentions>a {
     color: white;
     margin: 5px 0;
     font-size: 1.1rem;
@@ -418,17 +418,17 @@ footer>.mentions>a{
         height: 8vh;
         padding: 0;
     }
-  
-    footer>.reseaux{
+
+    footer>.reseaux {
         order: 2;
     }
 
-    footer>.mentions{
+    footer>.mentions {
         order: 1;
     }
 }
 
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1158px) {
     header {
         background-color: black;
     }
@@ -439,11 +439,11 @@ footer>.mentions>a{
 
     .burger>.content {
         display: block;
+        position: relative;
         background: none;
-        top: 0px;
-        left: 728px;
-        width: 45%;
-      }
+        top: 0;
+        left: -25px;
+    }
 
     .burger>.content>ul {
         display: flex;
@@ -524,9 +524,9 @@ footer>.mentions>a{
 }
 
 @media screen and (min-width:1500px) {
+
     .burger>.content {
-        left: 1150px;
-        width: 35%;
+        left: -45px;
     }
 
     .japon>h2 {
@@ -552,6 +552,7 @@ footer>.mentions>a{
         position: absolute;
         top: 347px;
         left: 300px;
+
     }
 
     .presentation>.content {
@@ -568,6 +569,7 @@ footer>.mentions>a{
 }
 
 @media screen and (min-width:2000px) {
+
     header {
         background-color: black;
         height: 200px;
@@ -579,105 +581,103 @@ footer>.mentions>a{
     }
 
     .burger>.content {
-        left: 2244px;
-        top: 50px;
-        width: 30%;
-      }
+        left: -150px;
+    }
 
-      .burger>.content>ul>li>a {
+    .burger>.content>ul>li>a {
         color: white;
         font-size: 3rem;
         font-family: 'Roboto', sans-serif;
-      }
-      
-      .content-top {
+    }
+
+    .content-top {
         margin-top: 900px;
-      }
+    }
 
-      .content-top>h1 {
+    .content-top>h1 {
         font-size: 26rem;
-      }
+    }
 
-      .content-top>h1::before {
+    .content-top>h1::before {
         height: 1200px;
         width: 1200px;
-      }
+    }
 
-      .japon{
-          margin-top: 1000px;
-      }
+    .japon {
+        margin-top: 1000px;
+    }
 
-      .japon>h2 {
+    .japon>h2 {
         font-size: 39rem;
-      }
+    }
 
-      .japon>h3 {
+    .japon>h3 {
         font-size: 8rem;
         margin-left: 200px;
         margin-bottom: 200px;
-      }
+    }
 
-      .japon>a {
+    .japon>a {
         padding: 44px 141px;
         font-size: 6rem;
-      }
+    }
 
-      .japon>a::before{
-          height: 150px;
-          width: 150px;
-          border-radius: 50%;
-      }
+    .japon>a::before {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
 
-      .presentation{
-          margin: 900px 0;
-      }
+    .presentation {
+        margin: 900px 0;
+    }
 
-      .presentation > h2 {
+    .presentation>h2 {
         font-size: 100rem;
-      }
+    }
 
-      .presentation>.content {
+    .presentation>.content {
         width: 100%;
         height: 700px;
         top: 934px;
-      }
+    }
 
-      .presentation>.content>p{
+    .presentation>.content>p {
         font-size: 5rem;
-      }
+    }
 
-      .presentation > figure {
+    .presentation>figure {
         width: 1199px;
         position: absolute;
         top: 347px;
         left: 200px;
-      }
+    }
 
-      .parkour>.table{
+    .parkour>.table {
         padding-top: 254px;
-      }
+    }
 
-      .parkour>.table>div>p {
+    .parkour>.table>div>p {
         margin-left: 70px;
         font-size: 5rem;
-      }
+    }
 
-      .parkour>.table>div>h3 {
+    .parkour>.table>div>h3 {
         margin-left: 30px;
         font-size: 5rem;
-      }
+    }
 
-      .parkour>h2 {
+    .parkour>h2 {
         font-size: 39rem;
         margin-bottom: -225px;
-      }
+    }
 
-      footer>.reseaux>a>img{
+    footer>.reseaux>a>img {
         width: 100px;
         margin: 15px 10px;
-      }
+    }
 
-      footer>.mentions>a{
+    footer>.mentions>a {
         font-size: 2.5rem;
-      }
+    }
 }
