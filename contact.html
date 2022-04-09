@@ -1,50 +1,4 @@
-<?php 
-
-if (!empty($_POST)) {
-
-    if (
-        isset($_POST["nom"],$_POST["prenom"], $_POST["email"], $_POST["sujet"], $_POST["message"])
-        && !empty($_POST["nom"])
-        && !empty($_POST["prenom"])
-        && !empty($_POST["email"])
-        && !empty($_POST["sujet"])
-        && !empty($_POST["message"])
-
-    ) {
-
-        $nom = strip_tags($_POST["nom"]);
-        $prenom = strip_tags($_POST["prenom"]);
-        $email = strip_tags($_POST["email"]);
-        $sujet = strip_tags($_POST["sujet"]);
-        // on neutralise les balise
-        $message = htmlspecialchars($_POST["message"]);
-
-        // Valider l'email
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo "L'adresse e-mail n'est pas valide";
-        } else {
-
-            require_once "includes/connexionB.php";
-
-            $sql = "INSERT INTO `contact` (`nom`,`prenom`, `email`,`sujet`, `message`) VALUES (:nom, :prenom, :mail, :sujet, :message);";
-
-            $query = $db->prepare($sql);
-
-            $query->bindValue(":nom", $nom, PDO::PARAM_STR);
-            $query->bindValue(":prenom", $prenom, PDO::PARAM_STR);
-            $query->bindValue(":mail", $_POST["email"]);
-            $query->bindValue(":sujet", $sujet, PDO::PARAM_STR);
-            $query->bindValue(":message", $message, PDO::PARAM_STR);
-
-            $query->execute();
-
-            header("loction: contact.php");
-        }
-    } else {
-        die("le formulaire est incomplet");
-    }
-}
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -148,7 +102,6 @@ if (!empty($_POST)) {
             </section>
 
             <section class="mentions">
-                <a href="mentions.html">Mentions légales</a>
                 <a href="mentions.html">Mentions légales</a>
             </section>
     </footer>
