@@ -1,4 +1,56 @@
-<!DOCTYPE html>
+<?php
+
+if (!empty($_POST)) {
+    
+    if (
+        isset($_POST["name"], $_POST["first"], $_POST["email"], $_POST["topic"], $_POST["message"])
+        && !empty($_POST["name"])
+        && !empty($_POST["first"])
+        && !empty($_POST["email"])
+        && !empty($_POST["topic"])
+        && !empty($_POST["message"])
+        
+        ) {
+            
+            $name = strip_tags($_POST["name"]);
+            $first = strip_tags($_POST["first"]);
+            $topic = strip_tags($_POST["topic"]);
+            $email = strip_tags($_POST["email"]);
+            // on neutralise les balise
+            $message = htmlspecialchars($_POST["message"]);
+            
+            // var_dump(array($name, $first, $topic, $email, $message));
+
+            
+            // Valider l'email
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    echo "L'adresse e-mail n'est pas valide";
+                
+                } else {
+
+            require_once "includes/connexionB.php";
+            $sql = "INSERT INTO `contact` (`nom`, `prenom`, `email`, `sujet`, `message`) VALUES (:name, :first, :mail, :sujet, :message);";
+        
+            $query = $db->prepare($sql);
+            
+            $query->bindValue(":name", $name, PDO::PARAM_STR);
+            $query->bindValue(":first", $first, PDO::PARAM_STR);
+            $query->bindValue(":mail", $_POST["email"]);
+            $query->bindValue(":sujet", $topic, PDO::PARAM_STR);
+            $query->bindValue(":message", $message, PDO::PARAM_STR);
+            
+            $query->execute();
+
+            header("Location: contact.php");
+            
+            
+                    }
+                    
+        } else {
+        die("le formulaire est incomplet");
+    }
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +84,7 @@
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="presentation.html">Présentation</a></li>
                     <li><a href="competences.html">Compétences</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </section>
         </nav>
@@ -62,33 +114,34 @@
                 <img src="img/japon.jpg" alt="image du japon">
             </figure>
 
-            <form action="POST">
+            <form action="" method="POST">
+
                 <div class="name">
                     <div>
-                    <label for="">Nom</label>
+                    <label for="nom">Nom</label>
                     <div id="messageN"></div>
-                    <input type="text" name="nom" id="name">
+                    <input type="text" name="name" id="name">
                     </div>
                     <div>
-                        <label for="">Prenom</label>
+                        <label for="prenom">Prenom</label>
                         <div id="messageP"></div>
-                        <input type="text" name="prenom" id="prenom">
+                        <input type="text" name="first" id="prenom">
                     </div>
                 </div>
                     <div>
-                    <label for="">E-mail</label>
+                    <label for="email">E-mail</label>
                     <div id="message"></div>
                     <input type="text" name="email" id="email">
                 </div>
                 <div>
-                    <label for="">Sujet</label>
+                    <label for="sujet">Sujet</label>
                     <div id="messageS"></div>
-                    <input type="text" name="sujet" id="sujet"> 
+                    <input type="text" name="topic" id="sujet"> 
                 </div>
                 <div>
-                    <label for="">Message</label>
+                    <label for="message">Message</label>
                     <div id="messageM"></div>
-                    <textarea name="" name="message" id="textarea" ></textarea>
+                    <textarea name="message" id="textarea" ></textarea>
                 </div>
                 <button>Envoyez</button>
             </form>
@@ -96,9 +149,9 @@
     </main>
     <footer>
             <section class="reseaux">
-                <a href="https://www.facebook.com/profile.php?id=100078875082843"><img src="img/facebookW.png" alt="facebook"></a>
-                <a href="https://www.linkedin.com/in/iliess-mazouari-966595215/"><img src="img/linkedinW.png" alt="linkedin"></a>
-                <a href="https://github.com/iliess-89"><img src="img/githubW.png" alt="github"></a>
+             <a href=""><img src="img/facebookW.png" alt="facebook"></a>
+             <a href=""><img src="img/linkedinW.png" alt="linkedin"></a>
+             <a href=""><img src="img/githubW.png" alt="github"></a>
             </section>
 
             <section class="mentions">
